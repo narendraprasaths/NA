@@ -1,15 +1,38 @@
-import { Akaya_Kanadaka, Josefin_Sans } from "next/font/google";
+import {
+  Berkshire_Swash,
+  Libre_Baskerville,
+  Niconne,
+  Poppins,
+} from "next/font/google";
+import LocalFont from "next/font/local";
 import "./globals.css";
 
-const josefinSans = Josefin_Sans({
+const berkshireSwash = Berkshire_Swash({
   subsets: ["latin"],
-  variable: "--font-josefin-sans",
+  variable: "--font-berkshire-swash",
   weight: ["400"],
 });
 
-const akayaKanadaka = Akaya_Kanadaka({
+const niconne = Niconne({
   subsets: ["latin"],
-  variable: "--font-akaya-kanadaka",
+  variable: "--font-niconne",
+  weight: ["400"],
+});
+
+const appleChancery = LocalFont({
+  src: [{ path: "../assets/fonts/apple-chancery-webfont.woff", weight: "400" }],
+  variable: "--font-apple-chancery",
+});
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  variable: "--font-libre-baskerville",
+  weight: ["400"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
   weight: ["400"],
 });
 
@@ -21,7 +44,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${josefinSans.variable} ${akayaKanadaka.variable}`}>
+      <body
+        className={`${berkshireSwash.variable} ${niconne.variable} ${appleChancery.variable} ${libreBaskerville.variable} ${poppins.variable}`}
+      >
         {children}
       </body>
     </html>
