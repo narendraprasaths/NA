@@ -3,7 +3,7 @@ import CountDownTimer from "@/components/CountDownTimer";
 import CountdownLeaf from "@/assets/countdown/countdown-leaf.svg";
 import Image from "next/image";
 
-const CountDownSection = (props) => {
+const CountDownSection = () => {
   return (
     <div className="relative flex items-center justify-center my-10">
       <div className="absolute right-0 top-64">

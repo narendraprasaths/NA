@@ -4,7 +4,7 @@ import LogoBlack from "../assets/logo/logo-black.svg";
 import IntroLeaf from "../assets/intro/intro-leaf.svg";
 import IntroHands from "../assets/intro/intro-hands.svg";
 
-const IntroSection = (props) => {
+const IntroSection = () => {
   return (
     <div
       className="p-7 relative"
