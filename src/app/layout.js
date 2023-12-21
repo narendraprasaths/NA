@@ -27,7 +27,7 @@ const appleChancery = LocalFont({
 const libreBaskerville = Libre_Baskerville({
   subsets: ["latin"],
   variable: "--font-libre-baskerville",
-  weight: ["400"],
+  weight: ["400", "700"],
 });
 
 const poppins = Poppins({
