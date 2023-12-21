@@ -48,6 +48,26 @@ export default function RootLayout({ children }) {
         className={`${berkshireSwash.variable} ${niconne.variable} ${appleChancery.variable} ${libreBaskerville.variable} ${poppins.variable}`}
       >
         {children}
+
+        <>
+          {/* Google tag (gtag.js) */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-XTGS8E8XHC`}
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XTGS8E8XHC', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+        </>
       </body>
     </html>
   );
