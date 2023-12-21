@@ -6,7 +6,7 @@ import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <IntroSection />
       <CountDownSection />
       <CoupleSection />
