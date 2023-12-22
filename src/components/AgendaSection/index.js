@@ -32,15 +32,15 @@ const AgendaSection = (props) => {
         <AgendaCard
           title="Engagement"
           date="Jan 21, 2023"
-          time="9:30am - 10:30am"
-          location="Malar Arangam, Madurai"
-          link="https://maps.app.goo.gl/SqTwMU16wCdWVmDS6"
+          time="10.30am - 11.00 am"
+          location="Manoraj Mahal, Madurai"
+          link="https://maps.app.goo.gl/JVwmW3wJUup7ZEJU6?g_st=ic"
           image={AgendaEngagement}
         />
         <AgendaCard
           title="Reception"
           date="Jan 31, 2024"
-          time="9:30am - 10:30am"
+          time="6.30pm - 7.30pm"
           location="Puttuthoppu MAVMM Mahal, Arappalayam, Madurai"
           link="https://maps.app.goo.gl/56v8Rd71Z6crmWAa8"
           image={AgendaReception}
@@ -63,15 +63,15 @@ const AgendaSection = (props) => {
         <AgendaBigCard
           title="Engagement"
           date="Jan 21, 2023"
-          time="9:30am - 10:30am"
-          location="Malar Arangam, Madurai"
-          link="https://maps.app.goo.gl/SqTwMU16wCdWVmDS6"
+          time="10.30am - 11.00 am"
+          location="Manoraj Mahal, Madurai"
+          link="https://maps.app.goo.gl/JVwmW3wJUup7ZEJU6?g_st=ic"
           image={AgendaEngagement}
         />
         <AgendaBigCard
           title="Reception"
           date="Jan 31, 2024"
-          time="9:30am - 10:30am"
+          time="6.30pm - 7.30pm"
           location="Puttuthoppu MAVMM Mahal, Arappalayam, Madurai"
           link="https://maps.app.goo.gl/56v8Rd71Z6crmWAa8"
           image={AgendaReception}

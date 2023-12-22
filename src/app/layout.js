@@ -39,6 +39,18 @@ const poppins = Poppins({
 export const metadata = {
   title: "Narendra ♡ Aarthi - 1 Feb, 2024",
   description: "We can’t wait to celebrate our special day with you",
+  openGraph: {
+    title: "Narendra ♡ Aarthi - 1 Feb, 2024",
+    description: "We can’t wait to celebrate our special day with you",
+    url: "https://aarthi-weds.narendraprasath.design/",
+    images: [
+      {
+        url: "https://aarthi-weds.narendraprasath.design/images/og-image.jpg",
+        width: 828,
+        height: 1190,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
