@@ -15,15 +15,23 @@ const Wishes = (props) => {
         }),
       })
         .then((res) => res.json())
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
+        .then((res) => {
+          console.log(res);
+          setWishes("");
+          alert("Thank you for your wishes!!");
+        })
+        .catch((err) => {
+          console.log(err);
+          setWishes("");
+          alert("Something went wrong! Please try again.");
+        });
     }
   };
 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center z-10 space-y-6 lg:space-y-0 lg:space-x-6">
       <input
-        className="font-poppins text-[16px] p-4 rounded-xl w-[80vw] lg:w-[40vw]"
+        className="font-poppins text-[16px] p-4 rounded-xl w-[80vw] lg:w-[40vw] focus-visible:outline-darkPink"
         placeholder="Send your wishes"
         value={wishes}
         onChange={(e) => setWishes(e.target.value)}
