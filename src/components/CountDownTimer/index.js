@@ -1,23 +1,29 @@
 "use client";
 
-import React from "react";
-import { useTimer } from "react-timer-hook";
+import React, { useEffect, useState } from "react";
 import TimerSection from "@/components/CountDownTimer/TimerSection";
-import { weeksBetween } from "@/utils";
+import { getTimerDetails } from "@/utils";
 
 const CountDownTimer = (props) => {
-  let weeks = weeksBetween(new Date(), new Date(2024, 2, 1));
-  const { days, hours, minutes, seconds } = useTimer({
-    expiryTimestamp: new Date("2024-02-01"),
-    onExpire: () => console.warn("Expired"),
-  });
+  const today = new Date();
+  const weedingDate = new Date(2024, 1, 0, 0, 0, 0, 0);
+
+  const [counter, setCounter] = useState(getTimerDetails(today, weedingDate));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounter(getTimerDetails(new Date(), weedingDate));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="flex items-center justify-between">
-      <TimerSection number={weeks} range="WEEKS" />
-      <TimerSection number={days} range="DAYS" />
-      <TimerSection number={hours} range="HOURS" />
-      <TimerSection number={minutes} range="MINS" />
-      <TimerSection number={seconds} range="SECS" />
+      <TimerSection number={counter.w} range="WEEKS" />
+      <TimerSection number={counter.d} range="DAYS" />
+      <TimerSection number={counter.h} range="HOURS" />
+      <TimerSection number={counter.m} range="MINS" />
+      <TimerSection number={counter.s} range="SECS" />
     </div>
   );
 };

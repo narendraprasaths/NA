@@ -31,7 +31,7 @@ const AgendaSection = (props) => {
       <div className="block lg:hidden">
         <AgendaCard
           title="Engagement"
-          date="Jan 21, 2023"
+          date="Jan 21, 2024"
           time="10.30am - 11.00 am"
           location="Manoraj Mahal, Madurai"
           link="https://maps.app.goo.gl/JVwmW3wJUup7ZEJU6?g_st=ic"
@@ -62,7 +62,7 @@ const AgendaSection = (props) => {
         </div>
         <AgendaBigCard
           title="Engagement"
-          date="Jan 21, 2023"
+          date="Jan 21, 2024"
           time="10.30am - 11.00 am"
           location="Manoraj Mahal, Madurai"
           link="https://maps.app.goo.gl/JVwmW3wJUup7ZEJU6?g_st=ic"
