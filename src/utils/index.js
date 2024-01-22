@@ -22,7 +22,7 @@ export const getTimerDetails = (today, weedingDate) => {
 
   return {
     w: weeks,
-    d: days,
+    d: days - 7,
     h: hours,
     m: minutes,
     s: seconds,
